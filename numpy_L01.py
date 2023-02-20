@@ -9,7 +9,7 @@ numpy library - test
 
 import numpy as np
 
-
+#
 a = np.arange(20)
 a
  
@@ -60,4 +60,54 @@ random_array
  
 linspace_array = np.linspace(100,200, num=5)
 linspace_array
+
+# create an array arr containing odd numbers from 5 to 29
+arr = np.arange(5, 30, 2)
+arr
+#Create a boolArr array containing True/False values. True if number < 10  
+boolArr = arr < 10
+boolArr
+   
+newArr = arr[boolArr]
+newArr
+ 
+newArr = arr[arr < 20]
+newArr 
+#the item value is divisible by 3 
+newArr = arr[arr%3==0]
+newArr
+#the value is greater than 10 and less than 20   
+newArr = arr[(arr > 5) & (arr < 20)]
+newArr
+ 
+# array with numbers from 0 to 23. We reshape arr to 4x6
+arr = np.arange(24).reshape(4,6)
+arr
+#we display column rows and values 
+arr[1]
+ 
+arr[1][2]
+arr[1, 2]
+ 
+arr[1, 2:4]
+arr[1, 2:5]
+ 
+arr[1, :]
+ 
+ 
+arr[: , 2]
+arr[0:3 , 2]
+ 
+arr[:3 , 2]
+ 
+arr[:3 , 2:4]
+ 
+arr[: , -1]
+ 
+arr[:, :-1]
+ 
+#we mix the values 
+np.random.shuffle(arr)
+arr
+ 
 
